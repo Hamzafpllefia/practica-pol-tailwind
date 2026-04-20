@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        /* Agrega estilos personalizados aquí si es necesario */
+        :root {
+            --background: #ffeeff;
+            --foreground: #113311;
+        }
+        .dark{
+            --color-background: #000000;
+            --color-foreground: #ffffff;
+        }
+        @theme{
+            --color-background: var (--background);
+            --color-foreground: var (--foreground);
+        }
+    </style>
+  </head>
+  <body class="bg-background  text-foreground">
+    <header class="flex justify-between border-b p-2">
+        <div class="bg-red-100">
+            <h1>Practica Pol Tailwind</h1>
+        </div>
+        <div>
+            <button class="bg-orange-300 px-4 cursor-pointer py-2 rounded-xl hover:bg-orange-500 " onclick="cambiarTema()">Cambiar estilo</button>
+        </div>
+    </header>
+    <script>
+        function cambiarTema(){
+            document.body.classList.toggle("dark");
+        }
+    </script>
+    </div>
+  </body>
+</html>
